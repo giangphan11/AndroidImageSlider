@@ -1,5 +1,6 @@
 package com.daimajia.slider.demo;
 
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -83,6 +84,7 @@ public class MainActivity extends ActionBarActivity implements BaseSliderView.On
     @Override
     protected void onStop() {
         // To prevent a memory leak on rotation, make sure to call stopAutoCycle() on the slider before activity or fragment is destroyed
+        // it not available in android 5.0
         mDemoSlider.stopAutoCycle();
         super.onStop();
     }
